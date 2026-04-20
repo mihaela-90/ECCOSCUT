@@ -1,0 +1,265 @@
+
+/* 1. RESETARE ȘI BAZĂ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f4e8;
+    color: #1a2a1a;
+    line-height: 1.6;
+    padding: 20px; /* Spațiu în jurul întregului site */
+}
+
+/* 2. NAVBAR UNIVERSAL (Fix pentru Logo stânga - Meniu dreapta) */
+.navbar-universal {
+    display: flex;
+    justify-content: space-between; /* Împinge logo la stânga și butoanele la dreapta */
+    align-items: center;
+    background-color: #d1d9bc;
+    padding: 10px 40px;
+    border-radius: 100px; /* Formă de capsulă */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #2d452d;
+    white-space: nowrap;
+}
+
+/* LISTA DE BUTOANE (Orizontală) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+}
+
+/* BUTOANELE DIN MENIU */
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a5a4a;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    font-family: inherit;
+}
+
+.menu-btn:hover {
+    color: #1a2a1a;
+    opacity: 0.8;
+}
+
+.btn-conectare {
+    background-color: #a8d5a2;
+    color: #1a2a1a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.btn-conectare:hover {
+    background-color: #97c491;
+    transform: scale(1.05);
+}
+
+/* 3. HERO SECTION */
+.hero-section {
+    height: 75vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('image.png'); /* Asigură-te că imaginea e în folder */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    margin-bottom: 60px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.btn-report {
+    background-color: #8fbc8f;
+    color: #1a2a1a;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-report:hover {
+    background-color: #a8d5a2;
+    transform: translateY(-3px);
+}
+
+/* 4. MISSION SECTION & CARDURI */
+.mission-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.serif-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #2d452d;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #4a5a4a;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Esențial pentru mobil */
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #4dbbc4;
+    color: white;
+    padding: 40px 30px;
+    width: 320px;
+    border-radius: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card.card-center {
+    background-color: #3a9ea5; /* Diferențiem puțin cardul din mijloc */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: #2d452d;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* 5. FOOTER CTA */
+.cta-footer {
+    background-color: #94bc94;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 40px;
+    margin-top: 50px;
+}
+
+.cta-footer h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #1a2a1a;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-footer {
+    background-color: white;
+    color: #1a2a1a;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: #f2f4e8;
+    transform: scale(1.05);
+}
+
+/* --- 6. RESPONSIVITATE (SE CONFORMEAZĂ PE MOBIL) --- */
+@media (max-width: 900px) {
+    .navbar-universal {
+        flex-direction: column; /* Pune logo sus și meniu jos pe ecrane mici */
+        padding: 20px;
+        border-radius: 30px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .card {
+        width: 100%; /* Cardurile ocupă toată lățimea pe telefon */
+    }
+}

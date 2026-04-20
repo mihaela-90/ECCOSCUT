@@ -1,0 +1,274 @@
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Plus Jakarta Sans', 'Arial', sans-serif; 
+}
+
+body { 
+    background-color: #f2f4e8;
+    color: #1a2a1a;
+    line-height: 1.6;
+    padding: 20px; /* Spațiu în jurul întregului site */
+}
+
+.navbar-universal {
+    display: flex;
+    justify-content: space-between; /* Împinge logo la stânga și butoanele la dreapta */
+    align-items: center;
+    background-color: #d1d9bc;
+    padding: 10px 40px;
+    border-radius: 100px; /* Formă de capsulă */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #2d452d;
+    white-space: nowrap;
+}
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+}
+
+/* REPARAȚIE: Stilul butoanelor din meniu */
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #4a5a4a;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s easy;
+    font-family: inherit;
+}
+
+.menu-btn:hover { 
+    color: #1a2a1a;
+    opacity: 0.8; 
+}
+
+/* REPARAȚIE: Butonul Conectează-te */
+.btn-connect {
+    background-color: #a8d5a2;
+    padding: 10px 25px;
+    border: none; /* Fără bordură neagră */
+    border-radius: 50px;
+    color: #1a2a1a !important;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.btn-connect:hover {
+    background-color: #97c491;
+    transform: scale(1.05);* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    }
+    
+    body {
+        background-color: #f2f4e8;
+        color: #1a2a1a;
+        line-height: 1.6;
+        padding: 20px; /* Spațiu în jurul întregului site */
+    }
+    
+    /* 2. NAVBAR UNIVERSAL (Fix pentru Logo stânga - Meniu dreapta) */
+    .navbar-universal {
+        display: flex;
+        justify-content: space-between; /* Împinge logo la stânga și butoanele la dreapta */
+        align-items: center;
+        background-color: #d1d9bc;
+        padding: 10px 40px;
+        border-radius: 100px; /* Formă de capsulă */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 30px auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .logo-img {
+        height: 45px;
+        width: auto;
+        border-radius: 50%;
+    }
+    
+    .logo-text {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #2d452d;
+        white-space: nowrap;
+    }
+    
+    /* LISTA DE BUTOANE (Orizontală) */
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    /* BUTOANELE DIN MENIU */
+    .menu-btn {
+        background: none;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        font-weight: 600;
+        color: #4a5a4a;
+        font-size: 1rem;
+        transition: 0.3s ease;
+        font-family: inherit;
+    }
+    
+    .menu-btn:hover {
+        color: #1a2a1a;
+        opacity: 0.8;
+    }
+    
+    .btn-conectare {
+        background-color: #a8d5a2;
+        color: #1a2a1a;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: inherit;
+    }
+    
+    .btn-conectare:hover {
+        background-color: #97c491;
+        transform: scale(1.05);
+    }
+}
+
+/* 3. CONȚINUT PAGINA HARTA */
+.content-card {
+    background-color: white;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.page-title { 
+    color: #2d452d; 
+    margin-bottom: 10px; 
+    font-size: 2rem;
+}
+
+.page-subtitle { 
+    color: #666; 
+    margin-bottom: 25px; 
+}
+
+.map-section { 
+    display: flex; 
+    gap: 20px; 
+    height: 500px; /* Am mărit puțin înălțimea pentru vizibilitate */
+}
+
+#map { 
+    flex: 2; 
+    border-radius: 20px; 
+    border: 1px solid #ddd;
+    background-color: #eee; /* Fundal temporar până se încarcă Leaflet */
+}
+
+.map-legend {
+    flex: 1;
+    background-color: #c5dedf;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-item { 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-weight: 500;
+}
+
+/* Stil pentru punctele colorate din legendă (dacă ai buline) */
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn-report-confirm {
+    margin-top: auto;
+    background-color: #4dbbc4;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.btn-report-confirm:hover {
+    background-color: #3a9ea5;
+    transform: translateY(-2px);
+}
+
+/* Ajustare pentru ecrane mici (Responsive) */
+@media (max-width: 768px) {
+    .map-section {
+        flex-direction: column;
+        height: auto;
+    }
+    #map {
+        height: 300px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 20px;
+    }
+}

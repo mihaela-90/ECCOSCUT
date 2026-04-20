@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronologia Acțiunii - EcoScut</title>
+    <link rel="stylesheet" href="evenimente.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar-universal">
+            <div class="logo-area">
+                <img src="img.png.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Eco Scut</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><button class="menu-btn" onclick="openHome()">Acasă</button></li>
+                <li><button class="menu-btn" onclick="openHarta()">Harta</button></li>
+                <li><button class="menu-btn" onclick="openEvenimente()">Evenimente</button></li>
+                <li><button class="menu-btn" onclick="openDespreNoi()">Despre Noi</button></li>
+                <li><button class="menu-btn" onclick="openConectare()">Conectează-te</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="timeline-container">
+        <div class="intro-text">
+            <h1>Împreună pentru o Moldovă mai curată</h1>
+            <p>Descoperă acțiunile noastre și implică-te acolo unde simți că poți face diferența.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="card-tag">Ecologizare Râu</div>
+                    <img src="raut.jpg" alt="Ecologizare Nistru" class="card-img">
+                    <div class="card-body">
+                        <span class="card-date">15 IUNIE, 2026</span>
+                        <h3>Curățăm Raut, pas cu pas</h3>
+                        <p>Ne adunăm în zona Bălți pentru a colecta plasticul de pe maluri. Fiecare voluntar contează!</p>
+                       
+                        <a href="conectare.html" class="btn-participa">Vreau să ajut</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="card-tag special">Patrimoniu</div>
+                    <img src="orheiulvechi.jpg" alt="Orheiul Vechi" class="card-img">
+                    <div class="card-body">
+                        <span class="card-date">22 AUGUST, 2026</span>
+                        <h3>Curățenie la Orheiul Vechi</h3>
+                        <p>Protejăm istoria și natura. O misiune specială în cel mai frumos loc turistic din Moldova.</p>
+                       
+                        <a href="conectare.html" class="btn-participa">Vreau să ajut</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="card-tag">Protecția Apelor</div>
+                    <img src="PRUTUL.jpg" alt="Ecologizare Prut" class="card-img">
+                    <div class="card-body">
+                        <span class="card-date">05 IULIE, 2026</span>
+                        <h3>Salvarea Malurilor Prutului</h3>
+                        <p>Acțiune masivă de curățare în zona Cahul. Haide să oprim poluarea apei împreună.</p>
+                       
+                        <a href="conectare.html" class="btn-participa">Vreau să ajut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="ecoscut.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScut Moldova</title>
+    <link rel="stylesheet" href="ecoscutaacasa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar-universal">
+            <div class="logo-area">
+                <img src="img.png.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Eco Scut</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><button class="menu-btn" onclick="openHome()">Acasă</button></li>
+                <li><button class="menu-btn" onclick="openHarta()">Harta</button></li>
+                <li><button class="menu-btn" onclick="openEvenimente()">Evenimente</button></li>
+                <li><button class="menu-btn" onclick="openDespreNoi()">Despre Noi</button></li>
+                <li><button class="menu-btn" onclick="openConectare()">Conectează-te</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Reducem plasticul.<br>Protejăm Moldova.</h1>
+            <p>Raportează zonele poluate și alătură-te echipei noastre de voluntari pentru a reda curățenia naturii!</p>
+            <a href="harta.html" class="btn-report">RAPORTEAZĂ O ZONĂ</a>
+        </div>
+    </main>
+
+    <section class="mission-section">
+        <h2 class="serif-title">Misiunea Noastra</h2>
+        <h3 class="subtitle">Lucrăm împreună pentru a crea o Moldovă mai curată și mai verde pentru toți</h3>
+
+        <div class="cards-container">
+            <div class="card">
+                <h4>Protejați natura</h4>
+                <p>Păstrarea pădurilor, râurilor și habitatelor naturale din Moldova pentru generațiile viitoare.</p>
+            </div>
+            <div class="card card-center">
+                <h4>Ape curate</h4>
+                <p>Eliminarea poluării cu plastic din râurile noastre și asigurarea unor surse de apă curată.</p>
+            </div>
+            <div class="card">
+                <h4>Un viitor durabil</h4>
+                <p>Construirea unei culturi a responsabilității față de mediu și a acțiunii comunitare.</p>
+            </div>
+        </div>
+
+        <a href="desprenoi.html" class="learn-more">Aflați Mai Multe Despre Noi &rarr;</a>
+    </section>
+
+    <footer class="cta-footer">
+        <h3>Ești gata sa faci diferenta?</h3>
+        <p>Alătură-te miilor de voluntari din toată Moldova în misiunea noastră de a proteja și conserva mediul nostru natural</p>
+        
+        <div class="footer-buttons">
+            <a href="evenimente.html" class="btn-footer">ÎNSCRIE-TE LA UN EVENIMENT</a>
+            <a href="harta.html" class="btn-footer">RAPORTEAZĂ POLUAREA</a>
+        </div>
+    </footer>
+    <script src="ecoscut.js"></script>
+</body>
+</html>

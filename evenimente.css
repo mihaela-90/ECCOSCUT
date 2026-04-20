@@ -1,0 +1,182 @@
+/* 1. RESETARE ȘI BAZĂ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f4e8;
+    color: #1a2a1a;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 2. NAVBAR UNIVERSAL (Neschimbat) */
+.navbar-universal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1d9bc;
+    padding: 10px 40px;
+    border-radius: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.logo-img { height: 45px; width: auto; border-radius: 50%; }
+.logo-text { font-weight: 800; font-size: 1.3rem; color: #2d452d; }
+.nav-links { display: flex; list-style: none; gap: 15px; align-items: center; }
+
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a5a4a;
+    font-size: 1rem;
+}
+
+.btn-conectare {
+    background-color: #a8d5a2;
+    color: #1a2a1a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 3. TIMELINE - LOGICA DE ARANJARE */
+.timeline-container {
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.intro-text { text-align: center; margin-bottom: 60px; }
+.intro-text h1 { font-size: 3rem; color: #2d452d; }
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+/* Linia centrală */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #d1d9bc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+}
+
+/* Rândul de eveniment */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px; /* Mai mult spațiu între carduri */
+    display: flex;
+    clear: both;
+}
+
+.timeline-item.left { justify-content: flex-start; padding-right: 50%; }
+.timeline-item.right { justify-content: flex-end; padding-left: 50%; }
+
+/* CARDUL ALB - REPARAT */
+.timeline-content {
+    background: white;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Forțează elementele să stea unul sub altul: Imagine -> Tag -> Text -> Buton */
+    position: relative;
+    z-index: 2;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bulina de pe linie */
+.timeline-dot {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #4dbbc4;
+    border: 4px solid #f2f4e8;
+    border-radius: 50%;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+/* CORPUL CARDULUI */
+.card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column; /* Asigură ordinea verticală în interior */
+    gap: 10px;
+}
+
+.card-tag {
+    background: #4dbbc4;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    align-self: flex-start; /* Stă la începutul rândului său */
+}
+.card-tag.special { background: #f39c12; }
+
+.card-date {
+    color: #8fbc8f;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.card-body h3 {
+    color: #2d452d;
+    font-size: 1.4rem;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* BUTONUL - REPARAT SĂ STEA JOS */
+.btn-participa {
+    background-color: #2d452d;
+    color: white !important;
+    border: none !important;
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    margin-top: auto; /* Îl împinge la fundul cardului dacă textul e scurt */
+}
+
+.btn-participa:hover {
+    background-color: #4dbbc4;
+}

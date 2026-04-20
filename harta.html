@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScut - Hartă Interactivă</title>
+    <link rel="stylesheet" href="harta.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar-universal">
+            <div class="logo-area">
+                <img src="img.png.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Eco Scut</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><button class="menu-btn" onclick="openHome()">Acasă</button></li>
+                <li><button class="menu-btn" onclick="openHarta()">Harta</button></li>
+                <li><button class="menu-btn" onclick="openEvenimente()">Evenimente</button></li>
+                <li><button class="menu-btn" onclick="openDespreNoi()">Despre Noi</button></li>
+                <li><button class="menu-btn" onclick="openConectare()">Conectează-te</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="content-card">
+            <h1 class="page-title">Harta zonelor poluate</h1>
+            <p class="page-subtitle">Apasă pe hartă pentru a marca o zonă poluată.</p>
+
+            <div class="map-section">
+                <div id="map"></div>
+
+                <aside class="map-legend">
+                    <h2>LEGENDĂ HARȚII</h2>
+                    <div class="legend-item"><span>📍</span> <strong>ZONĂ POLUATĂ</strong></div>
+                    <div class="legend-item"><span>✅</span> <strong>ZONĂ CURĂȚATĂ</strong></div>
+                    <button class="btn-report-confirm" id="confirmBtn">Confirmă Raportarea</button>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([47.0105, 28.8638], 7); 
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+    
+        var marker;
+    
+        // Aici se pune pin-ul la click pe hartă
+        map.on('click', function(e) {
+            if (marker) {
+                map.removeLayer(marker); 
+            }
+            marker = L.marker(e.latlng).addTo(map)
+                .bindPopup("<b>Zonă marcată!</b><br>Apasă butonul de confirmare.")
+                .openPopup();
+        });
+    
+        // Funcția pentru butonul de confirmare
+        document.getElementById('confirmBtn').addEventListener('click', function() {
+            if (marker) {
+                alert("Raportarea a fost trimisă cu succes pentru locația: " + marker.getLatLng().toString());
+                // Opțional: Schimbăm culoarea pin-ului sau îl lăsăm fix
+                marker.closePopup();
+            } else {
+                alert("Te rugăm să selectezi mai întâi un punct pe hartă!");
+            }
+        });
+    </script>
+        <script src="ecoscut.js"></script>
+</body>
+</html>
