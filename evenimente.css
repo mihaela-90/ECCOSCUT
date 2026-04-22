@@ -180,3 +180,38 @@ body {
 .btn-participa:hover {
     background-color: #4dbbc4;
 }
+
+/* --- 6. RESPONSIVITATE (SE CONFORMEAZĂ PE MOBIL) --- */
+@media (max-width: 900px) {
+    .navbar-universal {
+        flex-direction: column; /* Pune logo sus și meniu jos pe ecrane mici */
+        padding: 20px;
+        border-radius: 30px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .card {
+        width: 100%; /* Cardurile ocupă toată lățimea pe telefon */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

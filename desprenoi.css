@@ -1,3 +1,5 @@
+
+/* 1. RESETARE ȘI BAZĂ */
 * {
     margin: 0;
     padding: 0;
@@ -87,6 +89,7 @@ body {
     background-color: #97c491;
     transform: scale(1.05);
 }
+
 /* 3. HERO SECTION */
 .hero-despre {
     background: linear-gradient(rgba(45, 69, 45, 0.8), rgba(45, 69, 45, 0.8)), url('moldova-forest.jpg');
@@ -195,4 +198,39 @@ body {
     text-align: center; 
     padding: 40px; 
     color: #4a5a4a; 
+}
+
+/* --- 6. RESPONSIVITATE (SE CONFORMEAZĂ PE MOBIL) --- */
+@media (max-width: 900px) {
+    .navbar-universal {
+        flex-direction: column; /* Pune logo sus și meniu jos pe ecrane mici */
+        padding: 20px;
+        border-radius: 30px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .card {
+        width: 100%; /* Cardurile ocupă toată lățimea pe telefon */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
 }

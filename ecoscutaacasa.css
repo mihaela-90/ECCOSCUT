@@ -263,3 +263,7 @@ body {
         width: 100%; /* Cardurile ocupă toată lățimea pe telefon */
     }
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
