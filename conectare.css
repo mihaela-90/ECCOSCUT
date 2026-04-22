@@ -165,12 +165,11 @@ body {
 .login-footer a:hover {
     text-decoration: underline;
 }
-
-/* 3. Partea Dreaptă - Vizual */
 .login-right {
     flex: 1.2;
+    /* Am schimbat imaginea pentru a se potrivi cu fișierul tău de pe GitHub */
     background: linear-gradient(rgba(45, 69, 45, 0.4), rgba(45, 69, 45, 0.6)), 
-                url('image.png'); /* Verifică dacă fișierul chiar se numește image.png */
+                url('image.png'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -178,6 +177,7 @@ body {
     padding: 60px;
     color: white;
 }
+
 
 .overlay-text h2 {
     font-size: 2.5rem;
@@ -191,28 +191,21 @@ body {
     opacity: 0.95;
     max-width: 500px;
 }
-
-/* 4. Responsivitate pentru mobil */
-@media (max-width: 768px) {
-    .login-right { 
-        display: none; 
-    }
-    .login-left { 
-        padding: 40px 20px; 
-    }
-    .login-left h1 {
-        font-size: 2rem;
-    }
-}
 img {
     max-width: 100%;
     height: auto;
 }
-footer {
-    margin-top: 30px;
-    padding: 15px;
-    text-align: center;
-    background: #dff5e1;
-    color: #2e7d32;
-    border-radius: 15px;
+/* 4. Responsivitate pentru mobil */
+@media (max-width: 768px) {
+    .login-right { 
+        display: none; /* Această linie ASCUNDE imaginea pe telefon */
+    }
+    .login-left { 
+        padding: 40px 20px; 
+    }
+}
+.login-right {
+    flex: 1.2;
+    background-color: red !important; /* Dacă se face roșu, înseamnă că CSS-ul funcționează, dar nu găsește poza */
+    display: flex;
 }
