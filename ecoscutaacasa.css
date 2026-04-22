@@ -267,3 +267,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    background: #dff5e1;
+    color: #2e7d32;
+    border-radius: 15px;
+}
